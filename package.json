@@ -1,0 +1,17 @@
+{
+  "name": "how-much-snow",
+  "version": "1.0.0",
+  "description": "A simple snow forecasting app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "request-json": "0.5.x",
+    "locale": "0.0.20"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

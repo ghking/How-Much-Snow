@@ -1,0 +1,184 @@
+* { margin: 0; padding: 0; text-decoration: none; font-size: 1em; outline: none; }
+code, kbd, samp, pre, tt, var, textarea, input, select, isindex, listing, xmp, plaintext { font: inherit; font-size: 1em; white-space: normal; }
+dfn, i, cite, var, address, em { font-style: normal; }
+th, b, strong, h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+a, img, a img, iframe, form, fieldset, abbr, acronym, object, applet, table { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td, center { text-align: left; vertical-align: top; }
+body { line-height: 1; background: white; color: black; }
+q { quotes: "" ""; }
+ul, ol, dir, menu { list-style: none; }
+sub, sup { vertical-align: baseline; }
+a { color: inherit; }
+hr { display: none; } /* we don't need a visual hr in layout */
+img { display:block; }
+font { color: inherit !important; font: inherit !important; color: inherit !important; } /* disables some nasty font attributes in standard browsers */
+marquee { overflow: inherit !important; -moz-binding: none; }
+blink { text-decoration: none; }
+nobr { white-space: normal; }
+
+@font-face
+{
+    font-family: 'Brandon Grotesque';
+    src: url('../assets/fonts/brandon_light.woff') format('woff');
+    font-weight: light;
+}
+
+@font-face
+{
+    font-family: 'Brandon Grotesque';
+    src: url('../assets/fonts/brandon_bold.woff') format('woff');
+    font-weight: bold;
+}
+
+body, html
+{
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    background-color: #fbf2eb;
+}
+
+body, html, div
+{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: "Brandon Grotesque", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 120px;
+    color: #45351E;
+    font-weight: 200;
+    border: none;
+}
+
+ul, ol, li
+{
+    list-style-type: none;
+}
+
+#canvas
+{
+    position:absolute;
+    top:0;
+    left:0
+}
+
+#snowfall-container
+{
+    position: relative;
+    top: 42%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0;
+    padding: 32px;
+}
+
+#snowfall-subtext
+{
+    font-size: 48px;
+    opacity: 0.32;
+}
+
+#accumulation
+{
+    font-weight: bold;
+}
+
+#units
+{
+    font-weight: bold;
+}
+
+#bottom-text
+{
+    position: absolute;
+    bottom: 22px;
+    right: 124px;
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.name-link
+{
+    color: #7c9463;
+}
+
+#tweet-button
+{
+    position: absolute;
+    width: 92px;
+    height: 28px;
+    bottom: 16px;
+    right: 16px;
+    background-color: #A7774E;
+    font-size: 16px;
+    line-height: 28px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#spinner
+{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    top: 42%;
+    margin-left: -32px;
+    margin-top: -32px;
+    background-color: #45351E;
+    border-radius: 100%;
+    -webkit-animation: scaleout 1.0s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: scaleout 1.0s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#sad-face
+{
+    display: none;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    top: 42%;
+    margin-left: -32px;
+    margin-top: -32px;
+    background-image: url("../assets/images/sadface.png");
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+@-webkit-keyframes scaleout
+{
+    0%
+    {
+        -webkit-transform: scale(0.0)
+    }
+    100%
+    {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleout
+{
+    0%
+    {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    100%
+    {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
