@@ -44,7 +44,7 @@ function forecast(req, res, next)
 
     var locales = new locale.Locales(req.headers["accept-language"]);
 
-    var isMetric = locales.length == 0 || locales[0].code != "en-US";
+    var isMetric = locales.length == 0 || locales[0].normalized != "en_US";
 
     // Request the forecast
 
